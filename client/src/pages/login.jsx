@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 
 
 function Loginpage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleEvent = (e) => {
     e.preventDefault();
@@ -22,8 +25,8 @@ function Loginpage() {
   return (
     <div className="bg-blue-900 flex justify-center items-center h-screen">
       <form onSubmit={handleEvent} className="bg-white h-100 w-80 flex flex-col justify-center items-center gap-5">
-        <div className="flex flex-col">
-          <h1 className="text-5xl font-bold mb-4" > LOGIN </h1>
+        <div className="flex flex-col w-50">
+          <h1 className="text-5xl font-bold mb-4 ml-5" > LOGIN </h1>
           <label htmlFor = "email" className="text-2xl font-bold"> Email </label>
           <input
             type="email"
@@ -34,15 +37,18 @@ function Loginpage() {
           />
         </div>
 
-        <div className="flex flex-col">
-          <label htmlFor = "password" className="text-2xl font-bold ">Password</label>
+        <div className="relative w-50">
+          <label htmlFor = "password" className="text-2xl font-bold relative">Password</label>
           <input
-            type="password"
+            type={showPassword ? 'text' : 'password'}
             id="password"
             placeholder="Enter your password"
             onChange={(e) => setPassword(e.target.value)}
             className="pl-4 h-10 w-50 rounded-3xl bg-gray-300"
           />
+          <span onClick ={ () => setShowPassword(!showPassword)} className="absolute right-3 top-10.5 cursor-pointer text-gray-600">
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
         </div>
 
         <div className="bg-gray-300 rounded-3xl h-10 w-20 flex justify-center items-center">
