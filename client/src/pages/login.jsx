@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom'
+
 
 function Loginpage() {
   const [email, setEmail] = useState("");
@@ -20,34 +20,36 @@ function Loginpage() {
   }
 
   return (
-    <div className="login">
-      <form onSubmit={handleEvent}>
-        <div className="info">
-          <h1> Login </h1>
-          <label htmlFor = "email"> Email </label>
+    <div className="bg-blue-900 flex justify-center items-center h-screen">
+      <form onSubmit={handleEvent} className="bg-white h-100 w-80 flex flex-col justify-center items-center gap-5">
+        <div className="flex flex-col">
+          <h1 className="text-5xl font-bold mb-4" > LOGIN </h1>
+          <label htmlFor = "email" className="text-2xl font-bold"> Email </label>
           <input
             type="email"
             id = "email"
             placeholder="Enter your name"
             onChange={(e) => setEmail(e.target.value)}
+            className="pl-4 h-10 w-50 rounded-3xl bg-gray-300"
           />
         </div>
 
-        <div className="info">
-          <label htmlFor = "password">Password</label>
+        <div className="flex flex-col">
+          <label htmlFor = "password" className="text-2xl font-bold ">Password</label>
           <input
             type="password"
             id="password"
             placeholder="Enter your password"
             onChange={(e) => setPassword(e.target.value)}
+            className="pl-4 h-10 w-50 rounded-3xl bg-gray-300"
           />
         </div>
 
-        <div className="button">
+        <div className="bg-gray-300 rounded-3xl h-10 w-20 flex justify-center items-center">
           <input type="submit" />
         </div>
 
-        <p> Don't have an account?<Link to="/signUp"> signUp </Link> </p>
+        <p className="font-bold"> Don't have an account?signUp </p>
       </form>
     </div>
   );
