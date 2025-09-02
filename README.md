@@ -48,6 +48,44 @@ Ask any medicine or health-related question.
 
 The bot processes your query and provides a brief, helpful answer.
 
+
+
+UI Architecture — Full Visual Wireframe (Text)
+
+  +---------------------------------------------------------------+
+| SIDEBAR           |      TOP RIGHT: Welcome, User!           |
+|-------------------+-------------------------------------------|
+|                   |                                           |
+|  [ Profile        ]|  +-------------------------------+       |
+|  [ About Bot      ]|  | #Chats     | Duration | Accuracy |    |
+|  [ Chat History   ]|  +-------------------------------+       |
+|  [ Settings       ]|                                           |
+|  [ Configurations ]|  +------------------------------------+  |
+|  [ Feedback       ]|  | [ Testimonial 1 ] [Testimonial 2] |  |
+|                   |  | [ Testimonial 3 ] ...              |  |
+|                   |  +------------------------------------+  |
+|                   |                                           |
+|                   |  +------------------------------------+  |
+|                   |  | "Need health assistance?"           | |
+|                   |  | [ Start Chat ]                      | |
+|                   |  +------------------------------------+  |
+|                   |                                           |
+|                   |                                           |
+|                   |                                           |
++-------------------+-------------------------------------------+
+
+                        ⬇️ FLOATING ABOVE ALL CONTENT
+
+                        +------------------------------+
+                        | Chat with Bot (X)            |
+                        | ---------------------------- |
+                        | [chat messages appear here]  |
+                        |                              |
+                        | [Input box] [Send Button]    |
+                        +------------------------------+
+                           ↳ Bottom-Right (Floating)
+
+
 Use the information as a guide but consult a healthcare professional for medical decisions.
 
 Disclaimer
