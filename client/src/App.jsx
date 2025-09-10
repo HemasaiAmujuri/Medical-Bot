@@ -1,12 +1,14 @@
 import Login from "./pages/login"
 import Statusbar from "./pages/statusBar/statusBar";
+import Basicdetails from "./pages/signup/basic";
 
 
 function App(){
     return(
         <div>
-       <Statusbar />
+       {/* <Statusbar /> */}
        {/* <Login /> */}
+       <Basicdetails />
     </div>
     )
 };
