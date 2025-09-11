@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 
@@ -55,7 +56,7 @@ function Loginpage() {
           <input type="submit" />
         </div>
 
-        <p className="font-bold"> Don't have an account?signUp </p>
+        <p className="font-bold"> Don't have an account?<Link to = "/signUp" className="text-blue-500 underline hover:text-blue-700"> Signup </Link> </p>
       </form>
     </div>
   );
