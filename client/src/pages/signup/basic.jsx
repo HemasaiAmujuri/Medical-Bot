@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import Statusbar from "../statusBar/statusBar";
+import NextButton from "../../components/button";
 
 function Basicdetails() {
   const [form, setForm] = useState({
@@ -42,7 +44,9 @@ function Basicdetails() {
 
 
   return (
-    <div className="bg-blue-900 flex justify-center items-center h-screen">
+    <div className='flex flex-col bg-blue-900'>
+    <Statusbar style />
+    <div className="bg-blue-900 flex justify-center items-center h-screen mt-10 mb-3">
       <form className="bg-white h-190 w-80 flex flex-col justify-center items-center gap-5">
 
         <div className="flex flex-col w-60">
@@ -141,7 +145,10 @@ function Basicdetails() {
           />
         </div>
 
+            
       </form>
+    </div>
+          <NextButton />
     </div>
   );
 }
