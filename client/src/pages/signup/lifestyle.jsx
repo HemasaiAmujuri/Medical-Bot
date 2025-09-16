@@ -109,9 +109,6 @@ function LifeStyle() {
             <label htmlFor = "hydrated"> Staying hydrated </label>
           </div>
         </div>
-
-       
-
         
       </form>
     </div>
