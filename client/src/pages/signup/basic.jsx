@@ -1,18 +1,27 @@
-import React from "react";
 import { useState } from "react";
+import  submitForm  from '../../actions/actions'
+import { useDispatch } from 'react-redux';
+
 
 function Basicdetails() {
   const [form, setForm] = useState({
     name: "",
     email: "",
     mobile: "",
-    DOB: "",
+    dob: "",
     gender: "",
     password: "",
     confirmPassword: "",
     address: "",
   });
    const [error, setError] = useState("");
+
+   console.log(form,"form");
+
+  
+   const dispatch = useDispatch()
+
+   dispatch(submitForm(form))
 
 
    const handleNameChange = (e) => {
