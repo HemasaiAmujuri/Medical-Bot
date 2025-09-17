@@ -6,7 +6,8 @@ const initialState =  {
     email : "",
     mobile : "",
     dob : "",
-    address : ""
+    address : "",
+    submittedData: [] 
 }
 
 
