@@ -1,5 +1,6 @@
 import { useState } from "react";
 import submitForm from "../../actions/actions";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 
 function Basicdetails() {
@@ -13,6 +14,7 @@ function Basicdetails() {
     confirmPassword: "",
     address: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
 
   const dispatch = useDispatch();
@@ -153,36 +155,42 @@ function Basicdetails() {
             </div>
           </div>
 
-          <div className="flex flex-col w-60">
+          <div className="relative flex flex-col w-60">
             <label htmlFor="password" className="text-2xl font-bold">
               {" "}
               Password{" "}
             </label>
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               id="password"
               placeholder="Enter your password"
               onChange={(e) => setForm({ ...form, password: e.target.value })}
               required
               className="pl-4 h-10 w-50 rounded-3xl bg-gray-300"
             />
+            <span onClick ={ () => setShowPassword(!showPassword)} className="absolute right-12 top-11 cursor-pointer text-gray-600">
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
           </div>
 
-          <div className="flex flex-col w-60">
+          <div className="relative flex flex-col w-60">
             <label htmlFor="confirm-password" className="text-2xl font-bold">
               {" "}
               Confirm Password{" "}
             </label>
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               id="confirm-password"
-              placeholder="Confirm your password"
+              placeholder="Confirm password"
               onChange={(e) => {
                 setForm({ ...form, confirmPassword: e.target.value });
                 handlePasswordValidation();
               }}
               className="pl-4 h-10 w-50 rounded-3xl bg-gray-300"
             />
+             <span onClick ={ () => setShowPassword(!showPassword)} className="absolute right-12 top-11 cursor-pointer text-gray-600">
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
           </div>
 
           <div className="flex flex-col w-60">
