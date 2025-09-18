@@ -15,8 +15,6 @@ function Basicdetails() {
   });
   const [error, setError] = useState("");
 
-  console.log(form, "form");
-
   const dispatch = useDispatch();
 
   dispatch(submitForm(form));
@@ -130,7 +128,7 @@ function Basicdetails() {
               <div className="flex items-center">
                 <input
                   type="radio"
-                  id="gender"
+                  id="female"
                   name="gender"
                   value="female"
                   checked={form.gender === "female"}
@@ -143,7 +141,7 @@ function Basicdetails() {
               <div className="flex items-center">
                 <input
                   type="radio"
-                  id="gender"
+                  id="other"
                   name="gender"
                   value="female"
                   checked={form.gender === "other"}

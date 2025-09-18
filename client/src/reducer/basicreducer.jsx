@@ -2,19 +2,21 @@ import SUBMIT_FORM_DATA from '../actions/actions'
 
 
 const initialState =  {
-    name : "",
-    email : "",
-    mobile : "",
-    dob : "",
-    address : "",
+    name: "",
+    email: "",
+    mobile: "",
+    dob: "",
+    gender: "",
+    password: "",
+    confirmPassword: "",
+    address: "",
     submittedData: [] 
 }
 
 
 const formReducer = (state = initialState, action ) => {
-  console.log(action.type)
       switch(action.type){
-      case  SUBMIT_FORM_DATA:
+      case  'SUBMIT_FORM_DATA':
         return{
             ...state,
             name: action.payload.name,
