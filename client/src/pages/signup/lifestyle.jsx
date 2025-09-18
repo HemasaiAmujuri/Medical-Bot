@@ -1,5 +1,7 @@
 import React from "react";
+import { lifestyleForm } from "../../actions/actions";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 function LifeStyle() {
   const [smoke, setSmoke] = useState("");
@@ -14,6 +16,11 @@ function LifeStyle() {
       setWellness((...Prev) =>  [...Prev, value])
     }
   }
+
+
+    const dispatch = useDispatch();
+
+     dispatch(lifestyleForm(smoke,alcohol,sleep,diet,wellness));
 
   return (
     <div className="bg-blue-900 flex justify-center items-center h-screenover overflow-y-auto">

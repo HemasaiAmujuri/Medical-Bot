@@ -13,7 +13,6 @@ function Multistepform(){
 
 
     const handleNext = () => {
-         {console.log(step)}
     if (step < 3) {
       setStep(prevStep => prevStep + 1);  
     } else {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import submitForm from "../../actions/actions";
+import { basicForm } from "../../actions/actions";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 
@@ -19,7 +19,7 @@ function Basicdetails() {
 
   const dispatch = useDispatch();
 
-  dispatch(submitForm(form));
+  dispatch(basicForm(form));
 
   const handleNameChange = (e) => {
     const value = e.target.value;
@@ -89,7 +89,7 @@ function Basicdetails() {
             <input
               type="tel"
               id="mobile"
-              placeholder="Enter your Mobile"
+              placeholder="Enter your mobile"
               onChange={(e) => setForm({ ...form, mobile: e.target.value })}
               className="pl-4 h-10 w-50 rounded-3xl bg-gray-300"
             />
@@ -145,7 +145,7 @@ function Basicdetails() {
                   type="radio"
                   id="other"
                   name="gender"
-                  value="female"
+                  value="other"
                   checked={form.gender === "other"}
                   onChange={(e) => setForm({ ...form, gender: e.target.value })}
                   className="h-4 w-5 bg-gray-300"
