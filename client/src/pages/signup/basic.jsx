@@ -58,6 +58,7 @@ function Basicdetails() {
               id="name"
               value={form.name}
               placeholder="Enter your name"
+              autoComplete="name"
               onChange={(e) => {
                 setForm({ ...form, name: e.target.value }), handleNameChange();
               }}
@@ -75,6 +76,7 @@ function Basicdetails() {
               type="text"
               id="email"
               placeholder="Enter your email"
+              autoComplete="email"
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               required
               className="pl-4 h-10 w-50 rounded-3xl bg-gray-300"
@@ -89,6 +91,7 @@ function Basicdetails() {
             <input
               type="tel"
               id="mobile"
+              maxLength="10"
               placeholder="Enter your mobile"
               onChange={(e) => setForm({ ...form, mobile: e.target.value })}
               className="pl-4 h-10 w-50 rounded-3xl bg-gray-300"
@@ -201,6 +204,7 @@ function Basicdetails() {
             <textarea
               id="address"
               placeholder="Enter your address"
+              autoComplete="address"
               rows="3"
               cols="30"
               onChange={(e) => setForm({ ...form, address: e.target.value })}
