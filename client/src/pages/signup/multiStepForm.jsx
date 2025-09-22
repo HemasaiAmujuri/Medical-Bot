@@ -30,8 +30,8 @@ function Multistepform(){
 
             <div className="mt-20 mb-10">
                {step === 1 && <Basicdetails />}
-               {step === 2 && <Medicaldetails />}
-               {step === 3 && <LifeStyle /> }
+               {step === 2 && <LifeStyle /> }
+               {step === 3 &&  <Medicaldetails />}
             </div>
 
 
