@@ -1,5 +1,5 @@
 const  userSchema = require("../../models/users/users");
-import bcrypt from 'bcrypt'
+const bcrypt = require('bcrypt');
 
 
 

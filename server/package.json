@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Medical chatbot backend",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "nodemon": "nodemon index.js",
     "start": "node index.js"
