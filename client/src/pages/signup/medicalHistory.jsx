@@ -13,7 +13,13 @@ function Medicaldetails() {
 
 
   const dispatch = useDispatch();
-  dispatch(medicalHistoryForm(chronic,medications,allergies,surgeries,health))
+  dispatch(medicalHistoryForm({
+    chronic : chronic,
+    medications : medications,
+    allergies: allergies,
+    surgeries: surgeries,
+    health : health
+  }));
 
 
    

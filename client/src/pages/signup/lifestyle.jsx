@@ -20,7 +20,13 @@ function LifeStyle() {
 
     const dispatch = useDispatch();
 
-     dispatch(lifestyleForm(smoke,alcohol,sleep,diet,wellness));
+     dispatch(lifestyleForm({
+    smoke: smoke,
+    alcohol: alcohol,
+    sleep: sleep,
+    diet: diet,
+    wellness: wellness
+  }));
 
   return (
     <div className="bg-blue-900 flex justify-center items-center h-screenover overflow-y-auto">

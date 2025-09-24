@@ -50,7 +50,6 @@ const formReducer = (state = initialState, action) => {
                 ...state,
                 basicForm: {
                     ...state.basicForm,
-                    name: action.payload.name,
                     submittedBasicform: [...state.basicForm.submittedBasicform, action.payload],
                 },
                
@@ -60,7 +59,6 @@ const formReducer = (state = initialState, action) => {
                 ...state,
                 lifestyleForm: {
                     ...state.lifestyleForm,
-                    name: action.payload.name,
                     submittedLifestyleForm: [...state.lifestyleForm.submittedLifestyleForm, action.payload],
                 },
             };
@@ -69,7 +67,6 @@ const formReducer = (state = initialState, action) => {
                 ...state,
                 medicalHistoryForm: {
                     ...state.medicalHistoryForm,
-                    name: action.payload.name,
                     submittedMedicalhistoryForm: [...state.medicalHistoryForm.submittedMedicalhistoryForm, action.payload],
                 },
             };
