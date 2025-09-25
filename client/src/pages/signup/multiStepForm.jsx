@@ -4,6 +4,7 @@ import NextButton from '../../components/button'
 import Basicdetails from './basic'
 import Medicaldetails from './medicalHistory'
 import LifeStyle from './lifestyle'
+import SubmitButton from "../../components/submit";
 
 
 
@@ -34,9 +35,9 @@ function Multistepform(){
                {step === 3 &&  <Medicaldetails />}
             </div>
 
-
+           
             <div className="button-container">
-                 <NextButton onClick= {handleNext} />
+                 {step === 3 ? <SubmitButton/> : <NextButton onClick= {handleNext} />}
             </div>
 
         </div>
