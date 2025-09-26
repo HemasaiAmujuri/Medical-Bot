@@ -21,7 +21,7 @@ function SubmitButton(){
 
     const fetch = async () => {
         try{
-      const response = await axios.post('http://localhost:3000/api/user/create', payload)
+      const response = await axios.post('https://medical-bot-qe4d.onrender.com/api/user/create', payload)
       console.log(response.data,"response")
         }catch(err){
             console.log(err)
