@@ -6,4 +6,5 @@ services:
     buildCommand: cd server && npm install
     startCommand: cd server && npm start
     rootDir: server
+    instanceType: free
     autoDeploy: true
