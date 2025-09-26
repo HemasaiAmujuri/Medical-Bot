@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: medical-bot-backend
+    env: node
+    branch: master
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    rootDir: server
+    autoDeploy: true
